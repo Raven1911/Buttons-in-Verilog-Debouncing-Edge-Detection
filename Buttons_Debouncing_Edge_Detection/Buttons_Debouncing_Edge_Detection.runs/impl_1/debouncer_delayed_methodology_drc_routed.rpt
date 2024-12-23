@@ -1,0 +1,189 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Tue Dec 24 01:09:23 2024
+| Host         : Raven1911 running 64-bit major release  (build 9200)
+| Command      : report_methodology -file debouncer_delayed_methodology_drc_routed.rpt -pb debouncer_delayed_methodology_drc_routed.pb -rpx debouncer_delayed_methodology_drc_routed.rpx
+| Design       : debouncer_delayed
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 29
++-----------+----------+--------------------------------+------------+
+| Rule      | Severity | Description                    | Violations |
++-----------+----------+--------------------------------+------------+
+| LUTAR-1   | Warning  | LUT drives async reset alert   | 1          |
+| TIMING-18 | Warning  | Missing input or output delay  | 2          |
+| TIMING-20 | Warning  | Non-clocked latch              | 4          |
+| TIMING-23 | Warning  | Combinational loop found       | 21         |
+| LATCH-1   | Advisory | Existing latches in the design | 1          |
++-----------+----------+--------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell FSM0/Q_reg[20]_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) T0/Q_reg_reg[15]/CLR, T0/Q_reg_reg[16]/CLR, T0/Q_reg_reg[17]/CLR,
+T0/Q_reg_reg[18]/CLR, T0/Q_reg_reg[19]/CLR, T0/Q_reg_reg[1]/CLR,
+T0/Q_reg_reg[20]/CLR, T0/Q_reg_reg[2]/CLR, T0/Q_reg_reg[3]/CLR,
+T0/Q_reg_reg[4]/CLR, T0/Q_reg_reg[5]/CLR, T0/Q_reg_reg[6]/CLR,
+T0/Q_reg_reg[7]/CLR, T0/Q_reg_reg[8]/CLR, T0/Q_reg_reg[9]/CLR
+ (the first 15 of 21 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on reset_n relative to the rising and/or falling clock edge(s) of sys_clk_pin.
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An output delay is missing on debounced relative to the rising and/or falling clock edge(s) of sys_clk_pin.
+Related violations: <none>
+
+TIMING-20#1 Warning
+Non-clocked latch  
+The latch FSM0/FSM_onehot_state_next_reg[0] cannot be properly analyzed as its control pin FSM0/FSM_onehot_state_next_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#2 Warning
+Non-clocked latch  
+The latch FSM0/FSM_onehot_state_next_reg[1] cannot be properly analyzed as its control pin FSM0/FSM_onehot_state_next_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#3 Warning
+Non-clocked latch  
+The latch FSM0/FSM_onehot_state_next_reg[2] cannot be properly analyzed as its control pin FSM0/FSM_onehot_state_next_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#4 Warning
+Non-clocked latch  
+The latch FSM0/FSM_onehot_state_next_reg[3] cannot be properly analyzed as its control pin FSM0/FSM_onehot_state_next_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-23#1 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between T0/Q_reg[0]_i_1/I1 and T0/Q_reg[0]_i_1/O to disable the timing loop
+Related violations: <none>
+
+TIMING-23#2 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between T0/Q_reg[3]_i_5/I1 and T0/Q_reg[3]_i_5/O to disable the timing loop
+Related violations: <none>
+
+TIMING-23#3 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between T0/Q_reg[7]_i_6/I1 and T0/Q_reg[7]_i_6/O to disable the timing loop
+Related violations: <none>
+
+TIMING-23#4 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between T0/Q_reg_reg[11]_i_2/S[0] and T0/Q_reg_reg[11]_i_2/O[0] to disable the timing loop
+Related violations: <none>
+
+TIMING-23#5 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between T0/Q_reg_reg[11]_i_2/S[1] and T0/Q_reg_reg[11]_i_2/O[1] to disable the timing loop
+Related violations: <none>
+
+TIMING-23#6 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between T0/Q_reg_reg[11]_i_2/S[2] and T0/Q_reg_reg[11]_i_2/O[2] to disable the timing loop
+Related violations: <none>
+
+TIMING-23#7 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between T0/Q_reg_reg[11]_i_2/S[3] and T0/Q_reg_reg[11]_i_2/O[3] to disable the timing loop
+Related violations: <none>
+
+TIMING-23#8 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between T0/Q_reg_reg[15]_i_2/S[0] and T0/Q_reg_reg[15]_i_2/O[0] to disable the timing loop
+Related violations: <none>
+
+TIMING-23#9 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between T0/Q_reg_reg[15]_i_2/S[1] and T0/Q_reg_reg[15]_i_2/O[1] to disable the timing loop
+Related violations: <none>
+
+TIMING-23#10 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between T0/Q_reg_reg[15]_i_2/S[2] and T0/Q_reg_reg[15]_i_2/O[2] to disable the timing loop
+Related violations: <none>
+
+TIMING-23#11 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between T0/Q_reg_reg[15]_i_2/S[3] and T0/Q_reg_reg[15]_i_2/O[3] to disable the timing loop
+Related violations: <none>
+
+TIMING-23#12 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between T0/Q_reg_reg[19]_i_2/S[0] and T0/Q_reg_reg[19]_i_2/O[0] to disable the timing loop
+Related violations: <none>
+
+TIMING-23#13 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between T0/Q_reg_reg[19]_i_2/S[1] and T0/Q_reg_reg[19]_i_2/O[1] to disable the timing loop
+Related violations: <none>
+
+TIMING-23#14 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between T0/Q_reg_reg[19]_i_2/S[2] and T0/Q_reg_reg[19]_i_2/O[2] to disable the timing loop
+Related violations: <none>
+
+TIMING-23#15 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between T0/Q_reg_reg[19]_i_2/S[3] and T0/Q_reg_reg[19]_i_2/O[3] to disable the timing loop
+Related violations: <none>
+
+TIMING-23#16 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between T0/Q_reg_reg[20]_i_4/S[0] and T0/Q_reg_reg[20]_i_4/O[0] to disable the timing loop
+Related violations: <none>
+
+TIMING-23#17 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between T0/Q_reg_reg[3]_i_2/S[2] and T0/Q_reg_reg[3]_i_2/O[2] to disable the timing loop
+Related violations: <none>
+
+TIMING-23#18 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between T0/Q_reg_reg[3]_i_2/S[3] and T0/Q_reg_reg[3]_i_2/O[3] to disable the timing loop
+Related violations: <none>
+
+TIMING-23#19 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between T0/Q_reg_reg[7]_i_2/S[1] and T0/Q_reg_reg[7]_i_2/O[1] to disable the timing loop
+Related violations: <none>
+
+TIMING-23#20 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between T0/Q_reg_reg[7]_i_2/S[2] and T0/Q_reg_reg[7]_i_2/O[2] to disable the timing loop
+Related violations: <none>
+
+TIMING-23#21 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between T0/Q_reg_reg[7]_i_2/S[3] and T0/Q_reg_reg[7]_i_2/O[3] to disable the timing loop
+Related violations: <none>
+
+LATCH-1#1 Advisory
+Existing latches in the design  
+There are 4 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
+Related violations: <none>
+
+
